@@ -4,7 +4,8 @@ using System.Text;
 
 namespace DataVerse_Manager.Classes
 {
-    public class BaseEntity
+    public abstract class BaseEntity
     {
+        public int Id { get; set; }
     }
 }
