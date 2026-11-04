@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DataVerse_Manager.Classes
 {
-    public class JobStatistic
+    public class JobStatistic : BaseEntity
     {
         // Definition av egenskaper för JobStatistic-klassen
         public int OccupationId { get; set; }
