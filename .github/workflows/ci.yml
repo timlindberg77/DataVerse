@@ -1,0 +1,98 @@
+name: Task
+description: En liten, tydlig arbetsuppgift (några timmar eller en dag)
+title: "[Task] "
+labels: ["task"]
+body:
+  
+type: markdown
+  attributes:
+    value: |
+      En bra Task är liten, tydlig, möjlig att testa och har en konkret leverans.
+
+  
+type: input
+  id: user-story
+  attributes:
+    label: User Story
+    description: Vilken User Story hör den här Tasken till?
+    placeholder: "Som användare vill jag kunna ... så att jag ..."
+  validations:
+    required: true
+
+  
+type: dropdown
+  id: feature
+  attributes:
+    label: Feature
+    options:
+Huvudmeny
+Statistik
+Filter
+Sök jobb
+Jobbkompass
+Ansökningshanterare
+Data och lagring
+Annat
+validations:
+  required: true
+type: dropdown
+  id: uml-class
+  attributes:
+    label: Klass i UML-diagrammet
+    options:
+BaseEntity
+WorkType
+Occupation
+JobStatistic
+JobInterest
+DataStore<T>
+FailLogger
+Menu
+MainMenu
+AllStatisticsMenu
+FilterMenu
+SearchMenu
+CompassMenu
+ApplicationManagerMenu
+SpectreTablePrinter
+StatisticsService
+validations:
+  required: true
+
+  
+type: textarea
+  id: description
+  attributes:
+    label: Beskrivning
+    description: Vad ska göras? Vilka metoder eller attribut ska skapas?
+  validations:
+    required: true
+
+  
+type: textarea
+  id: done
+  attributes:
+    label: Klart när
+    description: Hur vet vi att Tasken är Done?
+    value: |
+[ ] Koden följer UML-diagrammet
+[ ] Kommentarer finns på klass och metoder
+[ ] Inmatning hanteras med TryParse
+[ ] Programmet bygger och är testat
+validations:
+  required: true
+
+  
+type: input
+  id: depends-on
+  attributes:
+    label: Beror på
+    description: Vilken klass eller Task måste vara klar först?
+    placeholder: "T.ex. Menu, #4"
+
+  
+type: input
+  id: assignee
+  attributes:
+    label: Ansvarig
+    placeholder: "@användarnamn"
